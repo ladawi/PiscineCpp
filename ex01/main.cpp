@@ -6,21 +6,22 @@
 /*   By: ladawi <ladawi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/27 18:01:05 by ladawi            #+#    #+#             */
-/*   Updated: 2022/03/27 21:57:25 by ladawi           ###   ########.fr       */
+/*   Updated: 2022/03/29 13:06:07 by ladawi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <string>
+#include <iomanip>
 #include "Contact.hpp"
 #include "PhoneBook.hpp"
 
 int		main(void)
 {
 	PhoneBook directory;
-	std::string input;
 	std::string buff[5];
 	std::string	x;
+	std::string input;
 
 	while (1)
 	{
@@ -30,26 +31,36 @@ int		main(void)
 		{
 			do
 			{
+				if (std::cin.eof() == 1)
+					break ;
 				std::cout << "Enter firstname :" << std::endl;
 				std::cin >> buff[0];
 			} while (buff[0].size() == 0);
 			do
 			{
+				if (std::cin.eof() == 1)
+					break ;
 				std::cout << "Enter lastname :" << std::endl;
 				std::cin >> buff[1];
 			} while (buff[1].size() == 0);
 			do
 			{
+				if (std::cin.eof() == 1)
+					break ;
 				std::cout << "Enter nickname :" << std::endl;
 				std::cin >> buff[2];
 			} while (buff[2].size() == 0);
 			do
 			{
+				if (std::cin.eof() == 1)
+					break ;
 				std::cout << "Enter phone number :" << std::endl;
 				std::cin >> buff[3];
 			} while (buff[0].size() == 0);
 			do
 			{
+				if (std::cin.eof() == 1)
+					break ;
 				std::cout << "Enter darkest secret :" << std::endl;
 				std::cin >> buff[4];
 			} while (buff[0].size() == 0);
@@ -69,8 +80,8 @@ int		main(void)
 			}
 			directory.tab[std::stoi(x)]->printcontact();
 		}
-		if (input.compare("EXIT") == 0)
-			break;
+		if (input.compare("EXIT") == 0 || std::cin.eof() == 1)
+			break ;
 	}
 
 	return (0);

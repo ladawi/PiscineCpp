@@ -6,7 +6,7 @@
 /*   By: ladawi <ladawi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/27 18:00:30 by ladawi            #+#    #+#             */
-/*   Updated: 2022/03/27 21:41:57 by ladawi           ###   ########.fr       */
+/*   Updated: 2022/03/29 11:30:28 by ladawi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ public:
 	PhoneBook(void);
 	~PhoneBook(void);
 
-	int	nbaddedcontact;
-	Contact *tab[8];
+	unsigned int	nbaddedcontact;
+	Contact 		*tab[8];
 
 	void	addcontact(int	id, std::string tab[5]);
 	void	print(void);
