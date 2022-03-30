@@ -6,7 +6,7 @@
 /*   By: ladawi <ladawi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 15:59:35 by ladawi            #+#    #+#             */
-/*   Updated: 2022/03/30 15:40:56 by ladawi           ###   ########.fr       */
+/*   Updated: 2022/03/30 15:51:17 by ladawi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define ZOMBIE_H
 
 #include <string>
-
+#include <iostream>
 
 class	Zombie	{
 
