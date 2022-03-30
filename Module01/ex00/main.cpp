@@ -6,7 +6,7 @@
 /*   By: ladawi <ladawi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 15:59:24 by ladawi            #+#    #+#             */
-/*   Updated: 2022/03/29 18:57:57 by ladawi           ###   ########.fr       */
+/*   Updated: 2022/03/30 15:45:51 by ladawi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,13 @@
 int	main()
 {
 	std::string kek;
+	Zombie *Pierre = newZombie("");
 
-	if (kek.c_str() == NULL)
-	// newZombie("Issou");
-	randomChump("ratio");
-	std::cout << "kekw" << std::endl;
-
+	Pierre->announce();
+	Pierre->set_name("ISSOU");
+	Pierre->announce();
+	kek = "ratio";
+	randomChump(kek);
+	delete (Pierre);
 	return (0);
 }
