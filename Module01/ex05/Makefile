@@ -6,11 +6,11 @@
 #    By: ladawi <ladawi@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/27 17:09:30 by ladawi            #+#    #+#              #
-#    Updated: 2022/03/30 19:22:46 by ladawi           ###   ########.fr        #
+#    Updated: 2022/03/31 14:40:31 by ladawi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = BraiiiiiiinnnzzzZ
+NAME = Harl
 FLAGS = -Wall -Wextra -Werror -std=c++98 -g3 -fsanitize=address
 CC = clang++
 
@@ -33,7 +33,7 @@ all : $(NAME)
 $(NAME) : $(OBJS) $(INCLUDES)
 	$(CC) $(FLAGS) $(OBJS) -I . -o $(NAME)
 
-%.o : %.cpp
+%.o : %.cpp $(INCLUDES)
 	$(CC) -c $< -I .
 
 clean : 
