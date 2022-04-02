@@ -1,40 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Harl.hpp                                           :+:      :+:    :+:   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ladawi <ladawi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/30 19:22:27 by ladawi            #+#    #+#             */
-/*   Updated: 2022/04/02 18:38:48 by ladawi           ###   ########.fr       */
+/*   Created: 2022/04/02 17:58:33 by ladawi            #+#    #+#             */
+/*   Updated: 2022/04/02 19:26:18 by ladawi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string>
 #include <iostream>
+#include <string>
 
-#ifndef HARL_H
-# define HARL_H
+#ifndef FIXED_H
+# define FIXED_H
 
-
-class 	Harl{
+class Fixed {
 
 public:
 
-	Harl(void);
-	~Harl(void);
+	Fixed(void);
+	Fixed(int const nb);
+	Fixed(Fixed const & src);
+	~Fixed(void);
 
-	void	complain(std::string level);
+	Fixed &		operator=(Fixed const & rhs);
 
-	void	(Harl::*funcptr[4])(void);
-	std::string Tab[4];
+	int getRawBits(void) const;
 
 private:
 
-	void _debug(void);
-	void _info(void);
-	void _warning(void);
-	void _error(void);
+	int		_nb;
+	static int const _comma;
 
 };
+
 #endif
