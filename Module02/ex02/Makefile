@@ -6,7 +6,7 @@
 #    By: ladawi <ladawi@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/27 17:09:30 by ladawi            #+#    #+#              #
-#    Updated: 2022/04/02 19:58:05 by ladawi           ###   ########.fr        #
+#    Updated: 2022/04/10 13:08:03 by ladawi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,7 +36,7 @@ $(NAME) : $(OBJS) $(INCLUDES)
 %.o : %.cpp $(INCLUDES)
 	$(CC) -c $< -I .
 
-clean : 
+clean :
 	rm -rf $(OBJS)
 
 fclean : clean
