@@ -1,30 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ladawi <ladawi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/10 16:58:48 by ladawi            #+#    #+#             */
-/*   Updated: 2022/04/10 18:14:36 by ladawi           ###   ########.fr       */
+/*   Created: 2022/04/10 18:15:34 by ladawi            #+#    #+#             */
+/*   Updated: 2022/04/10 20:48:09 by ladawi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
+#ifndef FRAGTRAP_H
+# define FRAGTRAP_H
 
-int	main(void)
-{
-	ClapTrap Issou;
-	ClapTrap Kekw("Jack");
+class	FragTrap : virtual public ClapTrap {
 
-	Issou = Kekw;
-	std::cout << Issou.getName() << std::endl;
-	std::cout << Issou.getHp() << std::endl;
-	std::cout << Issou.getStamina() << std::endl;
-	std::cout << Issou.getAtkdmg() << std::endl;
+public:
 
-	Kekw.attack("jeuxvideo.com");
-	Kekw.beRepaired(7);
-	return (0);
-}
+	FragTrap();
+	FragTrap(FragTrap const &);
+	FragTrap(std::string name);
+	FragTrap& operator=(FragTrap const &);
+	~FragTrap();
+
+	void	highFivesGuys(void);
+
+};
+
+#endif

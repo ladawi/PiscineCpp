@@ -6,7 +6,7 @@
 /*   By: ladawi <ladawi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/10 18:18:29 by ladawi            #+#    #+#             */
-/*   Updated: 2022/04/10 19:29:25 by ladawi           ###   ########.fr       */
+/*   Updated: 2022/04/10 20:44:39 by ladawi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,8 @@ ScavTrap::~ScavTrap(void) {
 	return ;
 }
 
-ScavTrap::ScavTrap(std::string name) {
+ScavTrap::ScavTrap(std::string name) : ClapTrap(name) {
 	std::cout << "ScavTrap Init constructor called" << std::endl;
-	this->setName(name);
 	this->setHp(100);
 	this->setStamina(50);
 	this->setAtkdmg(20);

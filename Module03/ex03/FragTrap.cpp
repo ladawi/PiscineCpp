@@ -6,7 +6,7 @@
 /*   By: ladawi <ladawi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/10 18:18:29 by ladawi            #+#    #+#             */
-/*   Updated: 2022/04/10 20:48:33 by ladawi           ###   ########.fr       */
+/*   Updated: 2022/04/10 20:49:43 by ladawi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,8 @@ FragTrap::~FragTrap(void) {
 	return ;
 }
 
-FragTrap::FragTrap(std::string name) {
+FragTrap::FragTrap(std::string name) : ClapTrap(name){
 	std::cout << "FragTrap Init constructor called" << std::endl;
-	this->setName(name);
 	this->setHp(100);
 	this->setStamina(100);
 	this->setAtkdmg(30);
@@ -45,7 +44,6 @@ FragTrap &		FragTrap::operator=(FragTrap const & rhs) {
 	this->setAtkdmg(rhs.getAtkdmg());
 	return (*this);
 }
-
 
 void			FragTrap::highFivesGuys(void) {
 	std::cout << "FragTrap " << this->getName() << " ask for highFives!" << std::endl;
