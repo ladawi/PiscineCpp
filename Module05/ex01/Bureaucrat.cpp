@@ -6,11 +6,12 @@
 /*   By: ladawi <ladawi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 17:11:31 by ladawi            #+#    #+#             */
-/*   Updated: 2022/04/13 18:16:54 by ladawi           ###   ########.fr       */
+/*   Updated: 2022/04/13 22:07:30 by ladawi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 Bureaucrat::Bureaucrat(void) {
 	std::cout << "Bureaucrat Default constuctor called" << std::endl;
@@ -76,6 +77,23 @@ void			Bureaucrat::decrement(void) {
 		throw Bureaucrat::GradeTooLowException();
 	else
 		this->_Grade++;
+	return ;
+}
+
+void			Bureaucrat::signForm(Form & Form) {
+	if (Form.getSigned() == 1)
+	{
+		std::cout << this->getName() << " couldn't sign " << Form.getName() << " because it is already signed." << std::endl;
+		return ;
+	}
+	try {
+		Form.beSigned(*this);
+	}
+	catch (std::exception& e) {
+		std::cout << this->getName() << " couldn't sign " << Form.getName() << " because " << e.what() << "." <<std::endl;
+		return ;
+	}
+	std::cout << this->getName() << " signed " << Form.getName() << "." << std::endl;
 	return ;
 }
 

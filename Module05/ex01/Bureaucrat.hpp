@@ -6,7 +6,7 @@
 /*   By: ladawi <ladawi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 17:26:48 by ladawi            #+#    #+#             */
-/*   Updated: 2022/04/13 19:09:09 by ladawi           ###   ########.fr       */
+/*   Updated: 2022/04/13 21:53:44 by ladawi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,11 @@
 #ifndef BUREAUCRAT_H
 # define BUREAUCRAT_H
 
-class	Bureaucrat {
+#include "Form.hpp"
+
+class Form;
+
+class Bureaucrat {
 
 public:
 	
@@ -50,6 +54,7 @@ public:
 	void		increment(void);
 	void		decrement(void);
 
+	void		signForm(Form & Form);
 
 	void		setGrade(int g);
 

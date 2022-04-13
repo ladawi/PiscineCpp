@@ -6,7 +6,7 @@
 /*   By: ladawi <ladawi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 16:56:39 by ladawi            #+#    #+#             */
-/*   Updated: 2022/04/13 19:17:16 by ladawi           ###   ########.fr       */
+/*   Updated: 2022/04/13 22:11:58 by ladawi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,6 +101,18 @@ int	main(void)
 
 	std::cout << h;
 
+	try {
+		h.beSigned(x);
+	}
+	catch (std::exception& e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+	std::cout << "---------------" << std::endl;
+	std::cout << h;
+	std::cout << "---------------" << std::endl;
+	std::cout << std::endl;
+	x.signForm(h);
 	std::cout << std::endl << "----------END-------" << std::endl;
 	return (0);
 }

@@ -6,16 +6,20 @@
 /*   By: ladawi <ladawi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 18:27:04 by ladawi            #+#    #+#             */
-/*   Updated: 2022/04/13 19:10:53 by ladawi           ###   ########.fr       */
+/*   Updated: 2022/04/13 21:51:15 by ladawi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string>
 #include <iostream>
 #include <stdexcept>
+#include "Bureaucrat.hpp"
 
 #ifndef FORM_H
 # define FORM_H
+
+class Bureaucrat;
+
 
 class Form {
 
@@ -51,6 +55,8 @@ public:
 
 	void		setGradeForSign(int	g);
 	void		setGradeForExec(int g);
+
+	bool		beSigned(Bureaucrat const & executor);
 
 private:
 
