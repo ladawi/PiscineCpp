@@ -6,7 +6,7 @@
 /*   By: ladawi <ladawi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 18:27:04 by ladawi            #+#    #+#             */
-/*   Updated: 2022/04/13 20:44:49 by ladawi           ###   ########.fr       */
+/*   Updated: 2022/04/13 22:34:21 by ladawi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 
 #ifndef AFORM_H
 # define AFORM_H
+
+#include "Bureaucrat.hpp"
 
 class AForm {
 
@@ -51,6 +53,8 @@ public:
 
 	void		setGradeForSign(int	g);
 	void		setGradeForExec(int g);
+
+	bool		beSigned(Bureaucrat const & executor);
 
 private:
 

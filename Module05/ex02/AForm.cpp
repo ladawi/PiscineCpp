@@ -6,7 +6,7 @@
 /*   By: ladawi <ladawi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 18:26:34 by ladawi            #+#    #+#             */
-/*   Updated: 2022/04/13 20:45:22 by ladawi           ###   ########.fr       */
+/*   Updated: 2022/04/13 22:27:03 by ladawi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,6 +81,15 @@ void			AForm::setGradeForExec(int g) {
 	else
 		this->_GradeForExec = g;
 }
+
+bool			AForm::beSigned(Bureaucrat const & executor) {
+	if (executor.getGrade() <= this->_GradeForSign)
+		this->_Signed = 1;
+	else
+		throw AForm::GradeTooLowException();
+	return (this->_Signed);
+}
+
 
 std::ostream &	operator<<(std::ostream & o, AForm const & rhs) {
 	o << "AForm named : " << rhs.getName() << ", Signed ? " << rhs.getSigned()
