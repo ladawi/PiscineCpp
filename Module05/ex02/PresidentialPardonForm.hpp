@@ -1,66 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Form.hpp                                           :+:      :+:    :+:   */
+/*   PresidentialPardonForm.hpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ladawi <ladawi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 18:27:04 by ladawi            #+#    #+#             */
-/*   Updated: 2022/04/13 19:10:53 by ladawi           ###   ########.fr       */
+/*   Updated: 2022/04/13 21:01:59 by ladawi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string>
 #include <iostream>
 #include <stdexcept>
+#include "AForm.hpp"
+#include "Bureaucrat.hpp"
 
-#ifndef FORM_H
-# define FORM_H
+#ifndef PRESIDENTIALPARDONFORM_H
+# define PRESIDENTIALPARDONFORM_H
 
-class Form {
+class PresidentialPardonForm : public AForm {
 
 public:
 
-	Form(void);
-	Form(Form const &);
-	Form(std::string name, int signlvl, int execlvl);
-	Form& operator=(Form const &);
-	~Form(void);
-	
-	class GradeTooHighException : public std::exception
-	{
-		public:
-			virtual const char* what() const throw()
-			{
-				return("Error GradeTooHighException in Form");
-			}
-	};
-	class GradeTooLowException : public std::exception
-	{
-		public:
-			virtual const char* what() const throw()
-			{
-				return("Error GradeTooLowException in Form");
-			}
-	};
+	PresidentialPardonForm(void);
+	PresidentialPardonForm(PresidentialPardonForm const &);
+	PresidentialPardonForm(std::string target);
+	PresidentialPardonForm& operator=(PresidentialPardonForm const &);
+	~PresidentialPardonForm(void);
 
+	std::string	getTarget(void) const;
 	std::string	getName(void) const;
 	bool		getSigned(void) const;
 	int			getGradeForSign(void) const;
 	int			getGradeForExec(void) const;
-
-	void		setGradeForSign(int	g);
-	void		setGradeForExec(int g);
+	
+	void		execute(Bureaucrat const & executor);
 
 private:
 
+	std::string	const	_Target;
 	std::string const	_Name;
 	bool				_Signed;
 	int					_GradeForSign;
 	int					_GradeForExec;
 
 };
-
-std::ostream &	operator<<(std::ostream & o, Form const & rhs);
 
 #endif

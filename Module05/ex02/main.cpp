@@ -6,14 +6,15 @@
 /*   By: ladawi <ladawi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 16:56:39 by ladawi            #+#    #+#             */
-/*   Updated: 2022/04/13 19:17:16 by ladawi           ###   ########.fr       */
+/*   Updated: 2022/04/13 20:49:15 by ladawi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string>
 #include <iostream>
 #include "Bureaucrat.hpp"
-#include "Form.hpp"
+#include "AForm.hpp"
+#include "PresidentialPardonForm.hpp"
 
 void	test(void)
 {
@@ -77,8 +78,11 @@ int	main(void)
 	std::cout << std::endl;
 	std::cout << "=================================" << std::endl;
 	std::cout << std::endl;
-
-	Form h = Form("Formulaire 1", 14 , 42);
+	//---------------------
+	//Proof that form is abstract;
+	// AForm abstrait = AForm("Name", 42, 42);
+	//---------------------
+	PresidentialPardonForm h = PresidentialPardonForm("Target");
 	std::cout << "---" << std::endl;
 	std::cout << "Setting wrong grade for Exec (-42) :" << std::endl;
 	try {
