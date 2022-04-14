@@ -6,7 +6,7 @@
 /*   By: ladawi <ladawi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 16:56:39 by ladawi            #+#    #+#             */
-/*   Updated: 2022/04/13 20:49:15 by ladawi           ###   ########.fr       */
+/*   Updated: 2022/04/15 00:05:15 by ladawi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 #include "Bureaucrat.hpp"
 #include "AForm.hpp"
 #include "PresidentialPardonForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "ShrubberyCreationForm.hpp"
 
 void	test(void)
 {
@@ -27,7 +29,8 @@ void	test(void)
 
 int	main(void)
 {
-	Bureaucrat x = Bureaucrat("Jean", 1);
+	Bureaucrat x = Bureaucrat("Elon", 1);
+	Bureaucrat p = Bureaucrat("Mark", 150);
 
 	std::cout << "---------START--------" << std::endl << std::endl;
 
@@ -82,7 +85,7 @@ int	main(void)
 	//Proof that form is abstract;
 	// AForm abstrait = AForm("Name", 42, 42);
 	//---------------------
-	PresidentialPardonForm h = PresidentialPardonForm("Target");
+	PresidentialPardonForm h = PresidentialPardonForm("Jack");
 	std::cout << "---" << std::endl;
 	std::cout << "Setting wrong grade for Exec (-42) :" << std::endl;
 	try {
@@ -102,9 +105,78 @@ int	main(void)
 	}
 	std::cout << "--------" << std::endl;
 	std::cout << std::endl;
-
 	std::cout << h;
+	std::cout << std::endl;
+	std::cout << "---" << std::endl;
+	try {
+		h.execute(x);
+	}
+	catch (std::exception& e) {
+		std::cout << e.what() << std::endl;
+	}
+	std::cout << "---" << std::endl;
+	x.signForm(h);
+	std::cout << "---" << std::endl;
+	try {
+		h.execute(p);
+	}
+	catch (std::exception& e) {
+		std::cout << e.what() << std::endl;
+	}
+	std::cout << "---" << std::endl;
+	try {
+		h.execute(x);
+	}
+	catch (std::exception& e) {
+		std::cout << e.what() << std::endl;
+	}
+	std::cout << "---" << std::endl;
+	std::cout << std::endl;
+	std::cout << "=================================" << std::endl;
+	std::cout << std::endl;
+	RobotomyRequestForm r = RobotomyRequestForm("Rudeus");
+	std::cout << "-----------" << std::endl;
 
+	x.signForm(r);
+	std::cout << "---" << std::endl;
+	try {
+		r.execute(x);
+	}
+	catch (std::exception& e) {
+		std::cout << e.what() << std::endl;
+	}
+	try {
+		r.execute(x);
+	}
+	catch (std::exception& e) {
+		std::cout << e.what() << std::endl;
+	}
+	try {
+		r.execute(x);
+	}
+	catch (std::exception& e) {
+		std::cout << e.what() << std::endl;
+	}
+	std::cout << std::endl;
+	std::cout << "=================================" << std::endl;
+	std::cout << std::endl;
+	ShrubberyCreationForm Y = ShrubberyCreationForm("Yudeu");
+	std::cout << "-----------" << std::endl;
+
+	x.signForm(Y);
+	std::cout << "---" << std::endl;
+	try {
+		Y.execute(x);
+	}
+	catch (std::exception& e) {
+		std::cout << e.what() << std::endl;
+	}
+	try {
+		Y.execute(x);
+	}
+	catch (std::exception& e) {
+		std::cout << e.what() << std::endl;
+	}
 	std::cout << std::endl << "----------END-------" << std::endl;
 	return (0);
 }

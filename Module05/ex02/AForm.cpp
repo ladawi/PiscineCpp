@@ -6,7 +6,7 @@
 /*   By: ladawi <ladawi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 18:26:34 by ladawi            #+#    #+#             */
-/*   Updated: 2022/04/13 22:27:03 by ladawi           ###   ########.fr       */
+/*   Updated: 2022/04/14 22:38:54 by ladawi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ AForm::AForm(std::string name, int signlvl, int execlvl) :
 		this->_GradeForSign = signlvl;
 		this->_GradeForExec = execlvl;
 	}
-	std::cout << "Init constructor called" << std::endl;
+	std::cout << "AForm Init constructor called" << std::endl;
 	return ;
 }
 

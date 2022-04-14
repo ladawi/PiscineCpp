@@ -6,7 +6,7 @@
 #    By: ladawi <ladawi@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/27 17:09:30 by ladawi            #+#    #+#              #
-#    Updated: 2022/04/13 20:16:38 by ladawi           ###   ########.fr        #
+#    Updated: 2022/04/15 00:37:48 by ladawi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,11 +14,11 @@ NAME = bureaucrat
 FLAGS = -Wall -Wextra -Werror -std=c++98 -g3
 CC = clang++
 
-FILES = main.cpp Bureaucrat.cpp AForm.cpp PresidentialPardonForm.cpp
+FILES = main.cpp Bureaucrat.cpp AForm.cpp PresidentialPardonForm.cpp RobotomyRequestForm.cpp ShrubberyCreationForm.cpp
 
 OBJS = $(FILES:%.cpp=%.o)
 
-INCLUDES = Bureaucrat.hpp AForm.hpp PresidentialPardonForm.hpp
+INCLUDES = Bureaucrat.hpp AForm.hpp PresidentialPardonForm.hpp RobotomyRequestForm.hpp ShrubberyCreationForm.hpp
 
 END = \033[0m
 RED = \033[0;91m
@@ -39,6 +39,7 @@ $(NAME) : $(OBJS) $(INCLUDES)
 
 clean :
 	rm -rf $(OBJS)
+	rm *_shrubbery
 
 fclean : clean
 	rm -rf $(NAME)

@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PresidentialPardonForm.hpp                         :+:      :+:    :+:   */
+/*   ShrubberyCreationForm.hpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ladawi <ladawi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -16,18 +16,18 @@
 #include "AForm.hpp"
 // #include "Bureaucrat.hpp"
 
-#ifndef PRESIDENTIALPARDONFORM_H
-# define PRESIDENTIALPARDONFORM_H
+#ifndef SHRUBBERYCREATIONFORM_H
+# define SHRUBBERYCREATIONFORM_H
 
-class PresidentialPardonForm : public AForm {
+class ShrubberyCreationForm : public AForm {
 
 public:
 
-	PresidentialPardonForm(void);
-	PresidentialPardonForm(PresidentialPardonForm const &);
-	PresidentialPardonForm(std::string target);
-	PresidentialPardonForm& operator=(PresidentialPardonForm const &);
-	~PresidentialPardonForm(void);
+	ShrubberyCreationForm(void);
+	ShrubberyCreationForm(ShrubberyCreationForm const &);
+	ShrubberyCreationForm(std::string target);
+	ShrubberyCreationForm& operator=(ShrubberyCreationForm const &);
+	~ShrubberyCreationForm(void);
 	
 	class GradeRequiredErrorException : public std::exception
 	{

@@ -6,7 +6,7 @@
 /*   By: ladawi <ladawi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 18:27:04 by ladawi            #+#    #+#             */
-/*   Updated: 2022/04/13 22:34:21 by ladawi           ###   ########.fr       */
+/*   Updated: 2022/04/14 21:45:04 by ladawi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,13 +46,15 @@ public:
 			}
 	};
 
-	virtual std::string	getName(void) const = 0;
-	virtual bool		getSigned(void) const = 0;
-	virtual int			getGradeForSign(void) const = 0;
-	virtual int			getGradeForExec(void) const = 0;
+	virtual std::string	getName(void) const;
+	virtual bool		getSigned(void) const;
+	virtual int			getGradeForSign(void) const;
+	virtual int			getGradeForExec(void) const;
 
 	void		setGradeForSign(int	g);
 	void		setGradeForExec(int g);
+
+	virtual void		execute(Bureaucrat &executor) const = 0;
 
 	bool		beSigned(Bureaucrat const & executor);
 

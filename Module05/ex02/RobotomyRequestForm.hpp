@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PresidentialPardonForm.hpp                         :+:      :+:    :+:   */
+/*   RobotomyRequestForm.hpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ladawi <ladawi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -16,18 +16,18 @@
 #include "AForm.hpp"
 // #include "Bureaucrat.hpp"
 
-#ifndef PRESIDENTIALPARDONFORM_H
-# define PRESIDENTIALPARDONFORM_H
+#ifndef ROBOTOMYREQUESTFORM_H
+# define ROBOTOMYREQUESTFORM_H
 
-class PresidentialPardonForm : public AForm {
+class RobotomyRequestForm : public AForm {
 
 public:
 
-	PresidentialPardonForm(void);
-	PresidentialPardonForm(PresidentialPardonForm const &);
-	PresidentialPardonForm(std::string target);
-	PresidentialPardonForm& operator=(PresidentialPardonForm const &);
-	~PresidentialPardonForm(void);
+	RobotomyRequestForm(void);
+	RobotomyRequestForm(RobotomyRequestForm const &);
+	RobotomyRequestForm(std::string target);
+	RobotomyRequestForm& operator=(RobotomyRequestForm const &);
+	~RobotomyRequestForm(void);
 	
 	class GradeRequiredErrorException : public std::exception
 	{
