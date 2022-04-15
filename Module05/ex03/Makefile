@@ -1,0 +1,47 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: ladawi <ladawi@student.42.fr>              +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2022/03/27 17:09:30 by ladawi            #+#    #+#              #
+#    Updated: 2022/04/15 01:54:27 by ladawi           ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+NAME = bureaucrat
+FLAGS = -Wall -Wextra -Werror -std=c++98 -g3
+CC = clang++
+
+FILES = main.cpp Bureaucrat.cpp AForm.cpp PresidentialPardonForm.cpp RobotomyRequestForm.cpp ShrubberyCreationForm.cpp Intern.cpp
+
+OBJS = $(FILES:%.cpp=%.o)
+
+INCLUDES = Bureaucrat.hpp AForm.hpp PresidentialPardonForm.hpp RobotomyRequestForm.hpp ShrubberyCreationForm.hpp Intern.hpp
+
+END = \033[0m
+RED = \033[0;91m
+YEL = \033[93m
+GRE = \033[0;92m
+PUR = \033[0;95m
+BLU = \033[0;34m
+BOLD = \033[1m
+
+all : $(NAME)
+
+$(NAME) : $(OBJS) $(INCLUDES)
+	$(CC) $(FLAGS) $(OBJS) -I . -o $(NAME)
+	@echo "$(GRE)Makefile done$(END)"
+
+%.o : %.cpp $(INCLUDES)
+	$(CC) -c $< -I .
+
+clean :
+	rm -rf $(OBJS)
+	rm *_shrubbery
+
+fclean : clean
+	rm -rf $(NAME)
+
+re : fclean all

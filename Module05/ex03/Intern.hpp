@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
+/*   Intern.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ladawi <ladawi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -13,28 +13,30 @@
 #include <string>
 #include <iostream>
 #include <stdexcept>
+#include "PresidentialPardonForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "ShrubberyCreationForm.hpp"
 
-#ifndef BUREAUCRAT_H
-# define BUREAUCRAT_H
+#ifndef INTERN_H
+# define INTERN_H
 
 class AForm;
 
-class	Bureaucrat {
+class	Intern {
 
 public:
 	
-	Bureaucrat();
-	Bureaucrat(Bureaucrat const &);
-	Bureaucrat(std::string name, int grade);
-	Bureaucrat& operator=(Bureaucrat const &);
-	~Bureaucrat();
+	Intern();
+	Intern(Intern const &);
+	Intern& operator=(Intern const &);
+	~Intern();
 
 	class GradeTooHighException : public std::exception
 	{
 		public:
 			virtual const char* what() const throw()
 			{
-				return("Error GradeTooHighException in Bureaucrat");
+				return("Error GradeTooHighException in Intern");
 			}
 	};
 	class GradeTooLowException : public std::exception
@@ -42,27 +44,30 @@ public:
 		public:
 			virtual const char* what() const throw()
 			{
-				return("Error GradeTooLowException in Bureaucrat");
+				return("Error GradeTooLowException in Intern");
 			}
 	};
 
-	int			getGrade(void) const;
-	std::string	getName(void) const;
+	// void		executeForm(AForm const & form);
 
-	void		increment(void);
-	void		decrement(void);
+	// void		signForm(AForm & AForm);
 
-	void		executeForm(AForm const & form);
+	AForm*	createPForm(std::string target);
+	AForm*	createRForm(std::string target);
+	AForm*	createSForm(std::string target);
 
-	void		signForm(AForm & AForm);
-
-	void		setGrade(int g);
+	AForm*	makeForm(std::string nameForm, std::string targetForm);
 
 private:
-	std::string const	_Name;
-	int					_Grade;
-};
 
-std::ostream &	operator<<(std::ostream & o, Bureaucrat const & rhs);
+	AForm	*(Intern::*_Tab[3])(std::string target);
+	std::string _Index[3] =
+	{"PresidentialPardonForm",
+	"RobotomyRequestForm",
+	"ShrubberyCreationForm"};
+
+
+
+};
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: ladawi <ladawi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/13 16:56:39 by ladawi            #+#    #+#             */
-/*   Updated: 2022/04/15 01:46:56 by ladawi           ###   ########.fr       */
+/*   Updated: 2022/04/15 03:23:19 by ladawi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 #include "PresidentialPardonForm.hpp"
 #include "RobotomyRequestForm.hpp"
 #include "ShrubberyCreationForm.hpp"
+#include "Intern.hpp"
 
 void	test(void)
 {
@@ -180,12 +181,45 @@ int	main(void)
 	std::cout << std::endl;
 	std::cout << "=================================" << std::endl;
 	std::cout << std::endl;
+
 	try {
 		elon.executeForm(r);
 	}
 	catch (std::exception& e) {
 		std::cout << e.what() << std::endl;
 	}
-	std::cout << std::endl << "----------END-------" << std::endl;
+	std::cout << std::endl;
+	std::cout << "=================================" << std::endl;
+	std::cout << std::endl;
+	Intern Kevin;
+	std::cout << std::endl;
+	std::cout << "---------------------" << std::endl;
+	std::cout << std::endl;
+
+	AForm	*ptr;
+	ptr = Kevin.makeForm("RobotomyRequestForm", "Ratio");
+
+	std::cout << std::endl;
+	std::cout << "---" << std::endl;
+
+	if (ptr != NULL)
+	{
+		try {
+			elon.executeForm(*ptr);
+		}
+		catch (std::exception& e) {
+			std::cout << e.what() << std::endl;
+		}
+		std::cout << "-----" << std::endl;
+		elon.signForm(*ptr);
+		std::cout << "-----" << std::endl;
+		try {
+			elon.executeForm(*ptr);
+		}
+		catch (std::exception& e) {
+			std::cout << e.what() << std::endl;
+		}
+	}
+	std::cout << std::endl << "----------END----------" << std::endl;
 	return (0);
 }
