@@ -6,7 +6,7 @@
 #    By: ladawi <ladawi@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/27 17:09:30 by ladawi            #+#    #+#              #
-#    Updated: 2022/04/17 04:35:23 by ladawi           ###   ########.fr        #
+#    Updated: 2022/04/19 16:21:03 by ladawi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,7 @@ BOLD = \033[1m
 all : $(NAME)
 
 $(NAME) : $(OBJS) $(INCLUDES)
-	$(CC) $(FLAGS) $(OBJS) -I . -o $(NAME)
+	$(CC) $(FLAGS) $(OBJS) -I .
 	@echo "$(GRE)Makefile done$(END)"
 
 %.o : %.cpp $(INCLUDES)
