@@ -6,19 +6,19 @@
 #    By: ladawi <ladawi@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/27 17:09:30 by ladawi            #+#    #+#              #
-#    Updated: 2022/04/21 17:31:28 by ladawi           ###   ########.fr        #
+#    Updated: 2022/04/21 18:16:32 by ladawi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Serialization
+NAME = identify_type
 FLAGS = -Wall -Wextra -Werror -std=c++98 -g3
 CC = clang++
 
-FILES = main.cpp Data.cpp
+FILES = main.cpp Class.cpp
 
 OBJS = $(FILES:%.cpp=%.o)
 
-INCLUDES = Data.hpp
+INCLUDES = Class.hpp
 
 END = \033[0m
 RED = \033[0;91m
@@ -39,6 +39,7 @@ $(NAME) : $(OBJS) $(INCLUDES)
 
 clean :
 	rm -rf $(OBJS)
+	rm a.out
 
 fclean : clean
 	rm -rf $(NAME)

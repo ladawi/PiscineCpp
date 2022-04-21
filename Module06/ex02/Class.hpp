@@ -1,38 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Data.hpp                                           :+:      :+:    :+:   */
+/*   Class.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ladawi <ladawi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/21 17:19:11 by ladawi            #+#    #+#             */
-/*   Updated: 2022/04/21 17:29:18 by ladawi           ###   ########.fr       */
+/*   Created: 2022/04/21 18:12:33 by ladawi            #+#    #+#             */
+/*   Updated: 2022/04/21 18:15:27 by ladawi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string>
 #include <iostream>
 
-#ifndef DATA_H
-# define DATA_H
+#ifndef CLASS_H
+# define CLASS_H
 
-class	Data {
+class	Base {
 
 public:
 
-	Data();
-	Data(Data const &);
-	Data(std::string name, int val);
-	Data& operator=(Data const &);
-	~Data();
-
-	std::string	getName(void) const;
-	int			getValue(void) const;
-
-private:
-	std::string _Name;
-	int			_Value;
+	virtual ~Base();
 
 };
 
+class	A : public Base {
+
+public:
+	A();
+	~A();
+};
+
+class	B : public Base {
+
+public:
+	B();
+	~B();
+};
+
+class	C : public Base {
+
+public:
+	C();
+	~C();
+};
 #endif
