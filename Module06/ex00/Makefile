@@ -6,7 +6,7 @@
 #    By: ladawi <ladawi@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/27 17:09:30 by ladawi            #+#    #+#              #
-#    Updated: 2022/04/19 16:21:03 by ladawi           ###   ########.fr        #
+#    Updated: 2022/04/21 18:10:44 by ladawi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,6 +39,7 @@ $(NAME) : $(OBJS) $(INCLUDES)
 
 clean :
 	rm -rf $(OBJS)
+	rm a.out
 
 fclean : clean
 	rm -rf $(NAME)
