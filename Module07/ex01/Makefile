@@ -6,11 +6,11 @@
 #    By: ladawi <ladawi@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/27 17:09:30 by ladawi            #+#    #+#              #
-#    Updated: 2022/04/22 18:36:38 by ladawi           ###   ########.fr        #
+#    Updated: 2022/04/23 19:21:31 by ladawi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = convert
+NAME = inter
 FLAGS = -Wall -Wextra -Werror -std=c++98 -g3
 CC = clang++
 

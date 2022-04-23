@@ -6,11 +6,11 @@
 #    By: ladawi <ladawi@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/27 17:09:30 by ladawi            #+#    #+#              #
-#    Updated: 2022/04/22 18:36:38 by ladawi           ###   ########.fr        #
+#    Updated: 2022/04/23 19:21:54 by ladawi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = convert
+NAME = Array
 FLAGS = -Wall -Wextra -Werror -std=c++98 -g3
 CC = clang++
 
@@ -18,7 +18,7 @@ FILES = main.cpp
 
 OBJS = $(FILES:%.cpp=%.o)
 
-INCLUDES = inter.hpp
+INCLUDES = Array.hpp
 
 END = \033[0m
 RED = \033[0;91m
