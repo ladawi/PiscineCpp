@@ -6,11 +6,18 @@
 /*   By: ladawi <ladawi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/17 02:57:59 by ladawi            #+#    #+#             */
-/*   Updated: 2022/04/23 19:18:43 by ladawi           ###   ########.fr       */
+/*   Updated: 2022/04/23 19:17:56 by ladawi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "inter.hpp"
+
+template< typename T>
+void	iter(T tab[], size_t len, void	func(T &arg)) {
+	for (size_t i = 0; i < len; i++)
+		func(tab[i]);
+	return ;
+}
 
 template<typename T>
 void	function(T &param)
