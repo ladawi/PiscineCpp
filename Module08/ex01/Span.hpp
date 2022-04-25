@@ -1,20 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Span.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ladawi <ladawi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/25 02:24:47 by ladawi            #+#    #+#             */
-/*   Updated: 2022/04/25 02:26:02 by ladawi           ###   ########.fr       */
+/*   Created: 2022/04/25 02:26:09 by ladawi            #+#    #+#             */
+/*   Updated: 2022/04/25 02:30:03 by ladawi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <string>
-#include "Span.hpp"
+#ifndef SPAN_HPP
+# define SPAN_HPP
 
-int	main() {
+# include <iostream>
+# include <string>
 
-	return (0);
-}
+class	Span {
+
+public:
+
+	Span();
+	~Span();
+
+	Span(Span const &);
+	Span& operator=(Span const &);
+
+private:
+
+};
+
+#endif

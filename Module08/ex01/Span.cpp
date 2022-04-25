@@ -1,20 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Span.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ladawi <ladawi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/25 02:24:47 by ladawi            #+#    #+#             */
-/*   Updated: 2022/04/25 02:26:02 by ladawi           ###   ########.fr       */
+/*   Created: 2022/04/25 02:25:40 by ladawi            #+#    #+#             */
+/*   Updated: 2022/04/25 02:30:35 by ladawi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <string>
 #include "Span.hpp"
 
-int	main() {
+Span::Span() {
+	std::cout << "Defautl constructor called." << std::endl;
+}
 
-	return (0);
+Span::~Span() {
+	std::cout << "Defautl constructor called." << std::endl;
+}
+
+Span::Span(Span const &rhs) {
+	this->
+	return ;
 }
