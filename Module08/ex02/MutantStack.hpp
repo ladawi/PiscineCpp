@@ -6,7 +6,7 @@
 /*   By: ladawi <ladawi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 04:34:35 by ladawi            #+#    #+#             */
-/*   Updated: 2022/04/25 05:48:51 by ladawi           ###   ########.fr       */
+/*   Updated: 2022/04/27 01:39:21 by ladawi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <stack>
 
 template < typename T >
-class MutantStack {
+class MutantStack : public std::stack<T> {
 
 public:
 
@@ -33,33 +33,15 @@ public:
 		return (*this);
 	};
 
-	void	push(T tmp) {
-		_stack.push(tmp);
+	typedef typename std::stack<T>::container_type::iterator iterator;
+	iterator	begin(){
+		return (this->c.begin());
 	}
-	
-	bool	empty(void) {
-		return (_stack.empty());
+	iterator	end(){
+		return (this->c.end());
 	}
-
-	size_t size() const {
-		return (_stack.size());
-	};
-
-	void	pop(void) {
-		_stack.pop();
-	}
-
-	int &top(void) {
-		return (_stack.top());
-	}
-
-	std::stack< T > &getStack() {
-		return(_stack);
-	};
 
 private:
-
-	std::stack< T > _stack;
 
 };
 
