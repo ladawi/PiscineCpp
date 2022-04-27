@@ -6,7 +6,7 @@
 /*   By: ladawi <ladawi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/27 18:01:05 by ladawi            #+#    #+#             */
-/*   Updated: 2022/03/29 15:17:42 by ladawi           ###   ########.fr       */
+/*   Updated: 2022/04/27 23:19:04 by ladawi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ int		main(void)
 			while (1)
 			{
 				std::cin >> x;
-				if (x.length() == 1 && std::isdigit(x[0]) == 1 && std::stoi(x) >= 0 && std::stoi(x) < 8)
+				if (x.length() == 1 && std::isdigit(x[0]) != 1 && std::stoi(x) >= 0 && std::stoi(x) < 8)
 					break ;
 				else
 					std::cout << "Error input index, please retry : " << std::endl;
