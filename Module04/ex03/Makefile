@@ -6,19 +6,19 @@
 #    By: ladawi <ladawi@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/27 17:09:30 by ladawi            #+#    #+#              #
-#    Updated: 2022/05/03 14:16:26 by ladawi           ###   ########.fr        #
+#    Updated: 2022/05/03 17:57:33 by ladawi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = Polymorphisme
-FLAGS = -Wall -Wextra -Werror -std=c++98
+FLAGS = -Wall -Wextra -Werror -std=c++98 -g3 -fsanitize=address
 CC = c++
 
-FILES = main.cpp
+FILES = main.cpp AMateria.cpp Ice.cpp Cure.cpp Character.cpp MateriaSource.cpp
 
 OBJS = $(FILES:%.cpp=%.o)
 
-INCLUDES = 
+INCLUDES = AMateria.hpp Ice.hpp Cure.cpp Character.hpp ICharacter.hpp MateriaSource.hpp IMateriaSource.hpp
 
 END = \033[0m
 RED = \033[0;91m
