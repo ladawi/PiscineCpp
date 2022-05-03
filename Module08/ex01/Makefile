@@ -6,13 +6,13 @@
 #    By: ladawi <ladawi@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/27 17:09:30 by ladawi            #+#    #+#              #
-#    Updated: 2022/04/25 02:45:19 by ladawi           ###   ########.fr        #
+#    Updated: 2022/05/03 13:43:31 by ladawi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = Array
 FLAGS = -Wall -Wextra -Werror -std=c++98 -g3
-CC = clang++
+CC = c++
 
 FILES = main.cpp Span.cpp
 

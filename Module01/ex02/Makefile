@@ -6,13 +6,13 @@
 #    By: ladawi <ladawi@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/27 17:09:30 by ladawi            #+#    #+#              #
-#    Updated: 2022/03/30 16:28:17 by ladawi           ###   ########.fr        #
+#    Updated: 2022/05/03 13:45:16 by ladawi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = HI_THIS_IS_BRAIN
-FLAGS = -Wall -Wextra -Werror -std=c++98 -g3 -fsanitize=address
-CC = clang++
+FLAGS = -Wall -Wextra -Werror -std=c++98
+CC = c++
 
 FILES = main.cpp
 

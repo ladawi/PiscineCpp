@@ -6,7 +6,7 @@
 /*   By: ladawi <ladawi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 04:30:48 by ladawi            #+#    #+#             */
-/*   Updated: 2022/04/27 01:48:03 by ladawi           ###   ########.fr       */
+/*   Updated: 2022/04/27 23:18:46 by ladawi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,8 +74,8 @@ int	main()
 	while (it != ite)
 	{
 		std::cout << *it << std::endl;
-		++it;
 	}
+		++it;
 	std::stack<int> e(mstack);
 	std::cout << "====== std::list ========" << std::endl;
 		std::list<int> istack;

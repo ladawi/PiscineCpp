@@ -6,13 +6,13 @@
 #    By: ladawi <ladawi@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/27 17:09:30 by ladawi            #+#    #+#              #
-#    Updated: 2022/03/29 15:18:18 by ladawi           ###   ########.fr        #
+#    Updated: 2022/05/03 13:43:01 by ladawi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = annuaire
 FLAGS = -Wall -Wextra -Werror -std=c++98
-CC = clang++
+CC = c++
 
 FILES = main.cpp Contact.cpp PhoneBook.cpp
 

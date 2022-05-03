@@ -6,13 +6,13 @@
 #    By: ladawi <ladawi@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/27 17:09:30 by ladawi            #+#    #+#              #
-#    Updated: 2022/04/15 00:37:48 by ladawi           ###   ########.fr        #
+#    Updated: 2022/05/03 13:51:39 by ladawi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = bureaucrat
 FLAGS = -Wall -Wextra -Werror -std=c++98 -g3
-CC = clang++
+CC = c++
 
 FILES = main.cpp Bureaucrat.cpp AForm.cpp PresidentialPardonForm.cpp RobotomyRequestForm.cpp ShrubberyCreationForm.cpp
 
@@ -39,7 +39,6 @@ $(NAME) : $(OBJS) $(INCLUDES)
 
 clean :
 	rm -rf $(OBJS)
-	rm *_shrubbery
 
 fclean : clean
 	rm -rf $(NAME)

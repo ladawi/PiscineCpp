@@ -6,13 +6,13 @@
 #    By: ladawi <ladawi@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/27 17:09:30 by ladawi            #+#    #+#              #
-#    Updated: 2022/03/30 18:11:44 by ladawi           ###   ########.fr        #
+#    Updated: 2022/05/03 13:45:42 by ladawi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = Sed_is_for_losers
-FLAGS = -Wall -Wextra -Werror -std=c++98 -g3 -fsanitize=address
-CC = clang++
+FLAGS = -Wall -Wextra -Werror -std=c++98
+CC = c++
 
 FILES = main.cpp
 

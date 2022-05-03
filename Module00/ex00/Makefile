@@ -6,13 +6,13 @@
 #    By: ladawi <ladawi@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/27 17:09:30 by ladawi            #+#    #+#              #
-#    Updated: 2022/03/27 17:45:35 by ladawi           ###   ########.fr        #
+#    Updated: 2022/05/03 13:42:56 by ladawi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = megaphone
 FLAGS = -Wall -Wextra -Werror -std=c++98
-CC = g++
+CC = c++
 
 FILES = megaphone.cpp
 
