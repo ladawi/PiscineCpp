@@ -6,12 +6,12 @@
 #    By: ladawi <ladawi@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/27 17:09:30 by ladawi            #+#    #+#              #
-#    Updated: 2022/05/03 13:43:31 by ladawi           ###   ########.fr        #
+#    Updated: 2022/05/03 14:16:47 by ladawi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = BraiiiiiiinnnzzzZ
-FLAGS = -Wall -Wextra -Werror -std=c++98 -g3 -fsanitize=address
+FLAGS = -Wall -Wextra -Werror -std=c++98  -fsanitize=address
 CC = c++
 
 FILES = main.cpp Zombie.cpp newZombie.cpp randomChump.cpp

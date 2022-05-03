@@ -6,19 +6,19 @@
 #    By: ladawi <ladawi@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/27 17:09:30 by ladawi            #+#    #+#              #
-#    Updated: 2022/05/03 14:16:47 by ladawi           ###   ########.fr        #
+#    Updated: 2022/05/03 14:16:26 by ladawi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = bureaucrat
-FLAGS = -Wall -Wextra -Werror -std=c++98 
+NAME = Polymorphisme
+FLAGS = -Wall -Wextra -Werror -std=c++98
 CC = c++
 
-FILES = main.cpp Bureaucrat.cpp
+FILES = main.cpp
 
 OBJS = $(FILES:%.cpp=%.o)
 
-INCLUDES = Bureaucrat.hpp
+INCLUDES = 
 
 END = \033[0m
 RED = \033[0;91m
