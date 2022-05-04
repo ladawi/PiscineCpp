@@ -6,7 +6,7 @@
 #    By: ladawi <ladawi@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/27 17:09:30 by ladawi            #+#    #+#              #
-#    Updated: 2022/05/03 13:43:01 by ladawi           ###   ########.fr        #
+#    Updated: 2022/05/04 15:13:48 by ladawi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ FILES = main.cpp Contact.cpp PhoneBook.cpp
 
 OBJS = $(FILES:%.cpp=%.o)
 
-INCLUDES = include.hpp
+INCLUDES = Contact.hpp PhoneBook.hpp
 
 END = \033[0m
 RED = \033[0;91m
