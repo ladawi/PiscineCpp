@@ -6,7 +6,7 @@
 /*   By: ladawi <ladawi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 17:58:32 by ladawi            #+#    #+#             */
-/*   Updated: 2022/04/10 16:30:51 by ladawi           ###   ########.fr       */
+/*   Updated: 2022/05/05 14:48:08 by ladawi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,7 @@ bool		Fixed::operator<(Fixed const & rhs) const {
 }
 
 bool		Fixed::operator>=(Fixed const & rhs) const {
-	return (this->_nb <= rhs.getRawBits());
+	return (this->_nb >= rhs.getRawBits());
 }
 
 bool		Fixed::operator<=(Fixed const & rhs) const {
