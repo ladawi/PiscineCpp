@@ -6,36 +6,31 @@
 /*   By: ladawi <ladawi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 17:58:32 by ladawi            #+#    #+#             */
-/*   Updated: 2022/04/10 16:30:51 by ladawi           ###   ########.fr       */
+/*   Updated: 2022/05/06 14:50:53 by ladawi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
-Fixed::Fixed(void) {
-	// std::cout << "Default constructor called" << std::endl;
+Fixed::Fixed(void) : _nb(0) {
 	return ;
 }
 
 Fixed::~Fixed(void) {
-	// std::cout << "Destructor called" << std::endl;
 	return ;
 }
 
 Fixed::Fixed(int const inb) : _nb(inb) {
-	// std::cout << "Int constructor called" << std::endl;
 	_nb = _nb << this->_comma;
 	return ;
 }
 
 Fixed::Fixed(float const fnb) {
-	// std::cout << "Float constructor called" << std::endl;
 	this->_nb = std::roundf(fnb * (1 << this->_comma));
 	return ;
 }
 
 Fixed::Fixed(Fixed const & src) {
-	// std::cout << "Copy constructor called" << std::endl;
 	*this = src;
 	return ;
 }
@@ -52,30 +47,25 @@ int		Fixed::getnb(void) const
 }
 
 Fixed &		Fixed::operator=(Fixed const & rhs) {
-	// std::cout << "Copy assignment operator called" << std::endl;
 
 	this->_nb = rhs.getRawBits();
 	return (*this);
 }
 
 Fixed		Fixed::operator+(Fixed const & rhs) const {
-	// std::cout << "+ operator called" << std::endl;
 	return (Fixed(this->toFloat() + rhs.toFloat()));
 
 }
 
 Fixed		Fixed::operator-(Fixed const & rhs) const {
-	// std::cout << "- operator called" << std::endl;
 	return (Fixed(this->toFloat() - rhs.toFloat()));
 }
 
 Fixed		Fixed::operator*(Fixed const & rhs) const {
-	// std::cout << "* operator called" << std::endl;
 	return (Fixed(this->toFloat() * rhs.toFloat()));
 }
 
 Fixed		Fixed::operator/(Fixed const & rhs) const {
-	// std::cout << "/ operator called" << std::endl;
 	return (Fixed(this->toFloat() / rhs.toFloat()));
 }
 
@@ -88,7 +78,7 @@ bool		Fixed::operator<(Fixed const & rhs) const {
 }
 
 bool		Fixed::operator>=(Fixed const & rhs) const {
-	return (this->_nb <= rhs.getRawBits());
+	return (this->_nb >= rhs.getRawBits());
 }
 
 bool		Fixed::operator<=(Fixed const & rhs) const {

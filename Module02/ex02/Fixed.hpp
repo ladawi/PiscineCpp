@@ -6,7 +6,7 @@
 /*   By: ladawi <ladawi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 17:58:33 by ladawi            #+#    #+#             */
-/*   Updated: 2022/04/10 16:36:30 by ladawi           ###   ########.fr       */
+/*   Updated: 2022/05/06 14:49:55 by ladawi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,8 +65,6 @@ private:
 };
 
 std::ostream &	operator<<(std::ostream & o, Fixed const & rhs);
-// Fixed			operator++(Fixed & rhs, int);
-// Fixed		&	operator++(Fixed & rhs);
 
 
 

@@ -6,13 +6,13 @@
 /*   By: ladawi <ladawi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 17:58:32 by ladawi            #+#    #+#             */
-/*   Updated: 2022/04/02 19:55:48 by ladawi           ###   ########.fr       */
+/*   Updated: 2022/05/06 14:51:24 by ladawi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
-Fixed::Fixed(void) {
+Fixed::Fixed(void) : _nb(0) {
 	std::cout << "Default constructor called" << std::endl;
 	return ;
 }
