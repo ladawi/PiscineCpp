@@ -6,7 +6,7 @@
 /*   By: ladawi <ladawi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 17:58:33 by ladawi            #+#    #+#             */
-/*   Updated: 2022/04/02 19:26:18 by ladawi           ###   ########.fr       */
+/*   Updated: 2022/05/06 15:48:10 by ladawi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@ public:
 
 	Fixed &		operator=(Fixed const & rhs);
 
-	int getRawBits(void) const;
+	int		getRawBits(void) const;
+	void	setRawBits(int const raw);
 
 private:
 

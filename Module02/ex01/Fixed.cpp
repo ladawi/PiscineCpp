@@ -6,7 +6,7 @@
 /*   By: ladawi <ladawi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 17:58:32 by ladawi            #+#    #+#             */
-/*   Updated: 2022/05/06 14:51:15 by ladawi           ###   ########.fr       */
+/*   Updated: 2022/05/06 15:48:45 by ladawi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,10 @@ std::ostream &	operator<<(std::ostream & o, Fixed const & rhs) {
 
 int	Fixed::getRawBits(void) const {
 	return (this->_nb);
+}
+
+void	Fixed::setRawBits(int const raw) {
+	this->_nb = raw;
 }
 
 float	Fixed::toFloat(void) const {

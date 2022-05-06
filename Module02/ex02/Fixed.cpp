@@ -6,7 +6,7 @@
 /*   By: ladawi <ladawi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 17:58:32 by ladawi            #+#    #+#             */
-/*   Updated: 2022/05/06 14:54:18 by ladawi           ###   ########.fr       */
+/*   Updated: 2022/05/06 15:48:39 by ladawi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -141,6 +141,10 @@ Fixed const & Fixed::min(Fixed const & n1, Fixed const & n2) {
 
 int	Fixed::getRawBits(void) const {
 	return (this->_nb);
+}
+
+void	Fixed::setRawBits(int const raw) {
+	this->_nb = raw;
 }
 
 float	Fixed::toFloat(void) const {

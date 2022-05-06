@@ -6,7 +6,7 @@
 /*   By: ladawi <ladawi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/02 17:58:33 by ladawi            #+#    #+#             */
-/*   Updated: 2022/04/02 20:23:18 by ladawi           ###   ########.fr       */
+/*   Updated: 2022/05/06 15:48:15 by ladawi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ public:
 	Fixed &		operator=(Fixed const & rhs);
 
 	int		getRawBits(void) const;
+	void	setRawBits(int const raw);
 	float	toFloat(void) const;
 	int		toInt(void) const;
 
