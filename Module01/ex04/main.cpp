@@ -6,11 +6,12 @@
 /*   By: ladawi <ladawi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/30 18:01:53 by ladawi            #+#    #+#             */
-/*   Updated: 2022/03/30 19:20:57 by ladawi           ###   ########.fr       */
+/*   Updated: 2022/05/05 12:39:59 by ladawi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Sed_is_for_losers.hpp"
+#include <fstream>
+#include <iostream>
 
 int		main(int ac, char **av)
 {
