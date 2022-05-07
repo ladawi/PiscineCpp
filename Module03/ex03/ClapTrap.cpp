@@ -6,19 +6,19 @@
 /*   By: ladawi <ladawi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/10 16:59:11 by ladawi            #+#    #+#             */
-/*   Updated: 2022/04/10 20:33:20 by ladawi           ###   ########.fr       */
+/*   Updated: 2022/05/07 18:17:00 by ladawi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap(void) : _Hp(10), _Stamina(10), _Atkdmg(0) {
+ClapTrap::ClapTrap(void) : _Name("Unknown"), _Hp(10), _Stamina(10), _Atkdmg(0) {
 	std::cout << "ClapTrap Default constructor called" << std::endl;
 	return ;
 }
 
 ClapTrap::~ClapTrap(void) {
-	std::cout << "ClapTrap Default constructor called" << std::endl;
+	std::cout << "ClapTrap Default destructor called" << std::endl;
 	return ;
 }
 

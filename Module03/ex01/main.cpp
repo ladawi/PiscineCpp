@@ -6,7 +6,7 @@
 /*   By: ladawi <ladawi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/10 16:58:48 by ladawi            #+#    #+#             */
-/*   Updated: 2022/04/10 19:37:48 by ladawi           ###   ########.fr       */
+/*   Updated: 2022/05/07 18:07:00 by ladawi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ int	main(void)
 	ScavTrap Yikes("Jack");
 	ScavTrap Issou;
 
+	std::cout << "-------------" << std::endl;
+	Issou.beRepaired(2);
 	std::cout << "-------------" << std::endl;
 	std::cout << "Issou stam = " << Issou.getStamina() << std::endl;
 	Yikes.attack("jeuxvideo.com");
@@ -51,7 +53,7 @@ int	main(void)
 	std::cout << Yikes.getAtkdmg() << std::endl;
 	std::cout << "---" << std::endl;
 	std::cout << "Jean stamina == " << Jean.getStamina() << std::endl;
-	Jean.attack("LE ROI DU SEL");
+	Jean.attack("thebausffs");
 	std::cout << "Jean stamina == " << Jean.getStamina() << std::endl;
 
 	std::cout << "-------------" << std::endl;

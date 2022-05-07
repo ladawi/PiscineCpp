@@ -6,7 +6,7 @@
 /*   By: ladawi <ladawi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/10 16:58:48 by ladawi            #+#    #+#             */
-/*   Updated: 2022/04/10 20:51:05 by ladawi           ###   ########.fr       */
+/*   Updated: 2022/05/07 18:21:45 by ladawi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ int	main(void)
 	FragTrap Yikes("Jack");
 	FragTrap Issou;
 
+	std::cout << "-------------" << std::endl;
 	std::cout << "-------------" << std::endl;
 	std::cout << "Issou stam = " << Issou.getStamina() << std::endl;
 	Yikes.attack("jeuxvideo.com");
@@ -43,7 +44,6 @@ int	main(void)
 	std::cout << "---" << std::endl;
 	std::cout << "Issou hp == " << Issou.getHp() << std::endl;\
 	std::cout << "---" << std::endl;
-	// Issou.guardGate();
 	Issou.highFivesGuys();
 	std::cout << "---" << std::endl;
 	std::cout << Yikes.getName() << " ";
@@ -58,7 +58,17 @@ int	main(void)
 	std::cout << "----------------------------" << std::endl;
 
 	DiamondTrap Mine("Rito");
+	DiamondTrap Bis;
+
 	std::cout << "---" << std::endl;
+	Bis.beRepaired(7);
+	Bis = Mine;
+	std::cout << "---" << std::endl;
+	std::cout << Bis.getName() << " ";
+	std::cout << Bis.getHp() << " ";
+	std::cout << Bis.getStamina() << " ";
+	std::cout << Bis.getAtkdmg() << std::endl;
+	std::cout << "---" << std::endl;std::cout << "---" << std::endl;
 	std::cout << Mine.getName() << " ";
 	std::cout << Mine.getHp() << " ";
 	std::cout << Mine.getStamina() << " ";

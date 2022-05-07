@@ -6,7 +6,7 @@
 /*   By: ladawi <ladawi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/10 18:18:29 by ladawi            #+#    #+#             */
-/*   Updated: 2022/04/10 20:48:33 by ladawi           ###   ########.fr       */
+/*   Updated: 2022/05/07 18:09:37 by ladawi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,10 @@
 
 FragTrap::FragTrap(void) {
 	std::cout << "FragTrap Default constuctor called" << std::endl;
+	this->setName("Unknown");
+	this->setHp(100);
+	this->setStamina(100);
+	this->setAtkdmg(30);
 }
 
 FragTrap::~FragTrap(void) {

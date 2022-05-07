@@ -6,7 +6,7 @@
 /*   By: ladawi <ladawi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/10 18:15:34 by ladawi            #+#    #+#             */
-/*   Updated: 2022/04/10 20:44:59 by ladawi           ###   ########.fr       */
+/*   Updated: 2022/05/07 18:21:56 by ladawi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,17 +31,12 @@ public:
 	DiamondTrap& operator=(DiamondTrap const &);
 	~DiamondTrap();
 
-	std::string getName(void);
+	std::string getName(void) const;
 	void		whoAmI(void);
-
-	// void			ScavTrap::attack(const std::string & target);
 
 private:
 
 	std::string		_Name;
-	// unsigned int	_Hp;
-	// unsigned int	_Stamina;
-	// unsigned int	_Atkdmg;
 
 };
 

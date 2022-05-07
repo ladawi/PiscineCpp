@@ -6,7 +6,7 @@
 /*   By: ladawi <ladawi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/10 18:18:29 by ladawi            #+#    #+#             */
-/*   Updated: 2022/04/10 18:50:17 by ladawi           ###   ########.fr       */
+/*   Updated: 2022/05/07 18:08:38 by ladawi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,10 @@
 
 ScavTrap::ScavTrap(void) {
 	std::cout << "ScavTrap Default constuctor called" << std::endl;
+	this->setName("Unknown");
+	this->setHp(100);
+	this->setStamina(50);
+	this->setAtkdmg(20);
 }
 
 ScavTrap::~ScavTrap(void) {

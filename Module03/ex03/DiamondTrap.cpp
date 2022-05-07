@@ -6,14 +6,17 @@
 /*   By: ladawi <ladawi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/10 18:18:29 by ladawi            #+#    #+#             */
-/*   Updated: 2022/04/10 20:37:39 by ladawi           ###   ########.fr       */
+/*   Updated: 2022/05/07 18:22:01 by ladawi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "DiamondTrap.hpp"
 
-DiamondTrap::DiamondTrap(void) {
+DiamondTrap::DiamondTrap(void) : ClapTrap("Unknown_clap_name"), ScavTrap("Unknown"), FragTrap("Unknown"), _Name("Unknown") {
 	std::cout << "DiamondTrap Default constuctor called" << std::endl;
+	this->FragTrap::setHp(100);
+	this->ScavTrap::setStamina(50);
+	this->FragTrap::setAtkdmg(30);
 }
 
 DiamondTrap::~DiamondTrap(void) {
@@ -35,7 +38,7 @@ DiamondTrap::DiamondTrap(DiamondTrap const & tmp) {
 	return ;
 }
 
-std::string	DiamondTrap::getName(void)
+std::string	DiamondTrap::getName(void) const
 {
 	return (this->_Name);
 }
@@ -49,23 +52,10 @@ void	DiamondTrap::whoAmI(void)
 DiamondTrap &		DiamondTrap::operator=(DiamondTrap const & rhs) {
 	std::cout << "DiamondTrap Copy assignment operator called" << std::endl;
 	
-	// this->setName(rhs.getName());
-	// this->setHp(rhs.getHp());
-	// this->setStamina(rhs.getStamina());
-	// this->setAtkdmg(rhs.getAtkdmg());
+	this->_Name = rhs.getName();
+	this->ClapTrap::setName(rhs.ClapTrap::getName());
+	this->setHp(rhs.getHp());
+	this->setStamina(rhs.getStamina());
+	this->setAtkdmg(rhs.getAtkdmg());
 	return (*this);
 }
-
-// void			DiamondTrap::attack(const std::string & target) {
-// 	if (this->getHp() > 0 && this->getStamina() > 0)
-// 	{
-// 		std::cout << "DiamondTrap " << this->getName() << " attacks " << target << ", causing " << this->getAtkdmg() << " points of damage!" << std::endl;
-// 		this->setStamina(this->getStamina() - 1);
-// 	}
-// 	return ;
-// }
-
-// void			DiamondTrap::highFivesGuys(void) {
-// 	std::cout << "DiamondTrap " << this->getName() << " ask for highFives!" << std::endl;
-// 	return ;
-// }
