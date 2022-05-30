@@ -6,7 +6,7 @@
 /*   By: ladawi <ladawi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/17 02:57:59 by ladawi            #+#    #+#             */
-/*   Updated: 2022/04/19 16:29:18 by ladawi           ###   ########.fr       */
+/*   Updated: 2022/05/30 13:26:10 by ladawi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ int	main(int ac, char *av[])
 	Convert C;
 
 	int i;
-	// std::cout << "----------" << std::endl;
 	if (ac == 2)
 	{
 		C.setStr(av[1]);
@@ -32,21 +31,18 @@ int	main(int ac, char *av[])
 		catch (std::exception &e) {
 			std::cout << e.what() <<std::endl;
 		}
-		// std::cout << "-----" << std::endl;
 		try	{
 			std::cout << "int: " << C.converttoint() << std::endl;
 		}
 		catch (std::exception &e) {
 			std::cout << e.what() << std::endl;
 		}
-		// std::cout << "-----" << std::endl;
 		try	{
 			std::cout << std::fixed << std::setprecision(1) << "float: " << C.converttofloat() << "f" << std::endl;
 		}
 		catch (std::exception &e) {
 			std::cout << e.what() << std::endl;
 		}		
-		// std::cout << "-----" << std::endl;
 		try	{
 			std::cout << std::fixed << std::setprecision(1) << "double: " << C.converttodouble() << std::endl;
 		}
@@ -55,7 +51,6 @@ int	main(int ac, char *av[])
 		}
 	}
 	else
-		std::cout << "Wrong nb arg" << std::endl;
-	// std::cout << "----------" << std::endl;
+		std::cout << "Wrong syntax : \n'./convert [arg]'" << std::endl;
 	return (0);	
 }

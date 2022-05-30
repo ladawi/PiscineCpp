@@ -6,7 +6,7 @@
 /*   By: ladawi <ladawi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/17 04:05:43 by ladawi            #+#    #+#             */
-/*   Updated: 2022/04/19 17:19:47 by ladawi           ###   ########.fr       */
+/*   Updated: 2022/05/30 13:24:04 by ladawi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,6 +104,8 @@ int			Convert::converttoint(void) {
 char		Convert::converttochar(void) {
 	char c;
 	
+	// if (this->_str.size() == 1 && !isdigit() && !isFloat())
+		// std::cout << "Issou :<" << static_cast<int>(this->_str[0]) << ">\n";
 	if (isdigit() || isFloat())
 	{
 		try {
@@ -128,6 +130,21 @@ char		Convert::converttochar(void) {
 	}
 	else
 	{
+		if (this->_str.size() == 1 && !isdigit() && !isFloat())
+		{
+			try {
+				this->_int = static_cast<int>(this->_str[0]);
+			}
+			catch (std::exception &e) {
+				throw Convert::ImpossibleExcept();
+			}
+			if (_int < 0 || _int > 256) {
+				throw Convert::ImpossibleExcept();
+			}
+			if (_int < 32 || _int > 127) {
+				throw Convert::Undisplayable();
+			}
+		}
 		if (_str.size() > 1)
 		{
 			throw Convert::ImpossibleExcept();
