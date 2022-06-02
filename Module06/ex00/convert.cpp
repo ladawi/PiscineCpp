@@ -6,7 +6,7 @@
 /*   By: ladawi <ladawi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/17 04:05:43 by ladawi            #+#    #+#             */
-/*   Updated: 2022/05/30 13:24:04 by ladawi           ###   ########.fr       */
+/*   Updated: 2022/06/02 10:35:39 by ladawi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,8 +76,11 @@ int			Convert::converttoint(void) {
 	double nb;
 
 	try {
-		nb = static_cast<double>(std::strtod(this->_str.c_str(), NULL));
-		if (!(isFloat())) {
+		if (isdigit() || isFloat())
+			nb = static_cast<double>(std::strtod(this->_str.c_str(), NULL));
+		if (this->_str.size() == 1 && !isdigit() && !isFloat())
+			nb = static_cast<int>(this->_str[0]);
+		else if (!(isFloat())) {
 			throw Convert::ImpossibleExcept();
 			return (0);
 		}
@@ -104,8 +107,6 @@ int			Convert::converttoint(void) {
 char		Convert::converttochar(void) {
 	char c;
 	
-	// if (this->_str.size() == 1 && !isdigit() && !isFloat())
-		// std::cout << "Issou :<" << static_cast<int>(this->_str[0]) << ">\n";
 	if (isdigit() || isFloat())
 	{
 		try {
@@ -144,15 +145,19 @@ char		Convert::converttochar(void) {
 			if (_int < 32 || _int > 127) {
 				throw Convert::Undisplayable();
 			}
+			this->_char = static_cast<char>(_str[0]);
 		}
-		if (_str.size() > 1)
+		else
 		{
-			throw Convert::ImpossibleExcept();
-			return ('\0');
-		}
-		this->_char = static_cast<char>(_str[0]);
-		if (_int < 32 || _int > 127) {
-			throw Convert::Undisplayable();
+			if (_str.size() > 1)
+			{
+				throw Convert::ImpossibleExcept();
+				return ('\0');
+			}
+			this->_char = static_cast<char>(_str[0]);
+			if (_int < 32 || _int > 127) {
+				throw Convert::Undisplayable();
+			}
 		}
 	}
 	return (this->_char);
@@ -160,11 +165,14 @@ char		Convert::converttochar(void) {
 
 float		Convert::converttofloat(void) {
 	try {
-		if (!(isFloat())) {
+		if (this->_str.size() == 1 && !isdigit() && !isFloat())
+			this->_float = static_cast<float>(this->_str[0]);
+		else if (!(isFloat())) {
 			throw Convert::ImpossibleExcept();
 			return (0);
 		}
-		this->_float = static_cast<float>(std::strtof(this->_str.c_str(), NULL));
+		else
+			this->_float = static_cast<float>(std::strtof(this->_str.c_str(), NULL));
 	}
 	catch (std::invalid_argument &e)
 	{
@@ -181,10 +189,14 @@ float		Convert::converttofloat(void) {
 
 double		Convert::converttodouble(void) {
 	try {
-		if (!(isFloat())) {
+		if (this->_str.size() == 1 && !isdigit() && !isFloat())
+			this->_double = static_cast<double>(this->_str[0]);
+		else if (!(isFloat())) {
 			throw Convert::ImpossibleExcept();
 			return (0);
-		}this->_double = static_cast<double>(std::strtod(this->_str.c_str(), NULL));
+		}
+		else
+			this->_double = static_cast<double>(std::strtod(this->_str.c_str(), NULL));
 	}
 	catch (std::invalid_argument &e)
 	{
