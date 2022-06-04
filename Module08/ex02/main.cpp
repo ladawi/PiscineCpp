@@ -6,7 +6,7 @@
 /*   By: ladawi <ladawi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 04:30:48 by ladawi            #+#    #+#             */
-/*   Updated: 2022/04/27 23:18:46 by ladawi           ###   ########.fr       */
+/*   Updated: 2022/06/04 08:58:34 by ladawi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ void reportStackSize(MutantStack<int>& s)
  
 void reportStackTop(MutantStack<int>& s)
 {
-    // Leaves element on stack
     std::cout << "Top element: " << s.top() << '\n';
 }
 
@@ -65,7 +64,6 @@ int	main()
 	mstack.push(3);
 	mstack.push(5);
 	mstack.push(737);
-	//[...]
 	mstack.push(0);
 	MutantStack<int>::iterator it = mstack.begin();
 	MutantStack<int>::iterator ite = mstack.end();
@@ -87,7 +85,6 @@ int	main()
 	istack.push_back(3);
 	istack.push_back(5);
 	istack.push_back(737);
-	//[...]
 	istack.push_back(0);
 	std::list<int>::iterator it2 = istack.begin();
 	std::list<int>::iterator ite2 = istack.end();

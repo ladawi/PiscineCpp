@@ -6,11 +6,11 @@
 #    By: ladawi <ladawi@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/27 17:09:30 by ladawi            #+#    #+#              #
-#    Updated: 2022/05/03 14:16:47 by ladawi           ###   ########.fr        #
+#    Updated: 2022/06/04 08:58:17 by ladawi           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Array
+NAME = MutantStack
 FLAGS = -Wall -Wextra -Werror -std=c++98 
 CC = c++
 
@@ -31,7 +31,7 @@ BOLD = \033[1m
 all : $(NAME)
 
 $(NAME) : $(OBJS) $(INCLUDES)
-	$(CC) $(FLAGS) $(OBJS) -I .
+	$(CC) $(FLAGS) $(OBJS) -I . -o $(NAME)
 	@echo "$(GRE)Makefile done$(END)"
 
 %.o : %.cpp $(INCLUDES)
